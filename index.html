@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PlacaFácil - Agendamento & Serviços Automotivos</title>
+    <link rel="stylesheet" href="ase.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div id="toast" class="toast">
+        <i class="fa-solid fa-circle-check"></i>
+        <span id="toast-message">Agendamento efetuado com sucesso!</span>
+    </div>
+
+    <header id="header">
+        <div class="logo">
+            <a href="#inicio"><i class="fa-solid fa-car-wrench"></i> PLACA<span>FÁCIL</span></a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#galeria">Galeria</a></li>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#video">Demonstração</a></li>
+                <li><a href="#simulador">Simulador</a></li>
+                <li><a href="#agendamento">Agendar</a></li>
+                <li><a href="#painel">Painel Oficina</a></li>
+            </ul>
+        </nav>
+        <div class="header-actions">
+            <button id="theme-toggle" class="btn-theme" title="Alternar Tema">
+                <i class="fa-solid fa-moon"></i>
+            </button>
+            <a href="#agendamento" class="btn-header">Marcar Revisão</a>
+        </div>
+    </header>
+
+    <main>
+        <section id="inicio" class="hero-section">
+            <div class="hero-content">
+                <span class="badge"><i class="fa-solid fa-clock"></i> ZERO FILAS DE ESPERA</span>
+                <h1>Manutenção Automotiva <span>Simples & Rápida</span></h1>
+                <p>Calcule o custo das revisões do seu veículo, escolha os serviços necessários e agende o seu horário na oficina em poucos cliques.</p>
+                <div class="hero-btns">
+                    <a href="#agendamento" class="btn-primary">Agendar Agora <i class="fa-solid fa-calendar-check"></i></a>
+                    <a href="#simulador" class="btn-secondary">Simular Custo <i class="fa-solid fa-calculator"></i></a>
+                </div>
+            </div>
+            
+            <div class="hero-card-container">
+                <div class="hero-card-main">
+                    <div class="card-icon"><i class="fa-solid fa-car-side"></i></div>
+                    <h2>PLACA<span>FÁCIL</span></h2>
+                    <p>Gestão Inteligente de Manutenções</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="galeria" class="content-section">
+            <div class="section-header">
+                <h2>Galeria de <span>Serviços</span></h2>
+                <p>Veja a nossa equipa em ação e os padrões de excelência na execução das manutenções.</p>
+            </div>
+
+            <div class="carousel-container">
+                <div class="carousel-track" id="carousel-track">
+                    <div class="carousel-slide">
+                        <img src="src/imagem 1.png" alt="Oficina Automotiva com Elevadores">
+                        <div class="slide-caption">
+                            <h3>Inspeção Geral & Elevadores</h3>
+                            <p>Elevação da viatura para verificação de suspensão, chassis e fugas.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="src/imagem 2.jpg" alt="Desmontagem e Manutenção de Motor">
+                        <div class="slide-caption">
+                            <h3>Reparação Pesada de Motores</h3>
+                            <p>Desmontagem e diagnóstico completo de componentes mecânicos.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="src/imagem 3.jpg" alt="Mecânico a Efetuar Manutenção no Motor">
+                        <div class="slide-caption">
+                            <h3>Revisão e Manutenção Preventiva</h3>
+                            <p>Ajuste de componentes, verificação de fluidos e troca de peças de desgaste.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="src/imagem 4.jpg" alt="Bloco do Motor e Componentes">
+                        <div class="slide-caption">
+                            <h3>Retífica e Peças de Alta Precisão</h3>
+                            <p>Trabalho detalhado no bloco e cabeçotes do motor.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="carousel-btn prev-btn" id="prev-btn"><i class="fa-solid fa-chevron-left"></i></button>
+                <button class="carousel-btn next-btn" id="next-btn"><i class="fa-solid fa-chevron-right"></i></button>
+
+                <div class="carousel-dots" id="carousel-dots">
+                    <span class="dot active" data-index="0"></span>
+                    <span class="dot" data-index="1"></span>
+                    <span class="dot" data-index="2"></span>
+                    <span class="dot" data-index="3"></span>
+                </div>
+            </div>
+        </section>
+
+        <section id="servicos" class="content-section">
+            <div class="section-header">
+                <h2>Nossos <span>Serviços</span></h2>
+                <p>Cuidados especializados para manter o seu veículo em perfeito estado de funcionamento.</p>
+            </div>
+            
+            <div class="cards-grid">
+                <div class="card">
+                    <div class="icon-box"><i class="fa-solid fa-oil-can"></i></div>
+                    <h3>Troca de Óleo & Filtros</h3>
+                    <p>Substituição do lubrificante do motor, filtro de óleo, filtro de ar e combustível com verificação detalhada de níveis.</p>
+                </div>
+                <div class="card">
+                    <div class="icon-box"><i class="fa-solid fa-microchip"></i></div>
+                    <h3>Diagnóstico Eletrónico</h3>
+                    <p>Leitura de parâmetros da centralina (ECU), verificação de sensores e identificação precisa de luzes no painel.</p>
+                </div>
+                <div class="card">
+                    <div class="icon-box"><i class="fa-solid fa-compact-disc"></i></div>
+                    <h3>Travões & Segurança</h3>
+                    <p>Inspeção e substituição de calços, discos de travão, rectificação do sistema hidráulico e teste de travagem.</p>
+                </div>
+                <div class="card">
+                    <div class="icon-box"><i class="fa-solid fa-dharmachakra"></i></div>
+                    <h3>Direção & Suspensão</h3>
+                    <p>Alinhamento de direção a laser, calibragem de rodas e troca de amortecedores, ponteiras e casquilhos.</p>
+                </div>
+                <div class="card">
+                    <div class="icon-box"><i class="fa-solid fa-car-battery"></i></div>
+                    <h3>Bateria & Sistema Elétrico</h3>
+                    <p>Teste de carga do alternador, diagnóstico de motor de arranque e substituição de baterias de alta durabilidade.</p>
+                </div>
+                <div class="card">
+                    <div class="icon-box"><i class="fa-solid fa-snowflake"></i></div>
+                    <h3>Climatização & AC</h3>
+                    <p>Carregamento de gás do ar condicionado, higienização do sistema e substituição do filtro do habitáculo.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="video" class="content-section">
+            <div class="section-header">
+                <h2>Conheça a <span>Nossa Oficina</span></h2>
+                <p>Acompanhe o processo de revisão e a tecnologia empregada nos nossos atendimentos.</p>
+            </div>
+
+            <div class="video-container">
+                <video controls poster="src/imagem 1.png">
+                    <source src="src/demonstracao.mp4" type="video/mp4">
+                    O seu navegador não suporta a reprodução de vídeos MP4.
+                </video>
+            </div>
+        </section>
+
+        <section id="simulador" class="content-section">
+            <div class="section-header">
+                <h2>Simulador de <span>Manutenção</span></h2>
+                <p>Selecione o porte do veículo e marque as intervenções necessárias para calcular o valor estimado.</p>
+            </div>
+
+            <div class="calculator-container">
+                <div class="calc-options">
+                    <h4>1. Porte do Veículo:</h4>
+                    <label class="calc-checkbox">
+                        <input type="radio" name="vehicle_type" value="1.0" checked>
+                        <span>Ligeiro / Citadino</span>
+                    </label>
+                    <label class="calc-checkbox">
+                        <input type="radio" name="vehicle_type" value="1.2">
+                        <span>SUV / Pick-Up / 4x4 (+20%)</span>
+                    </label>
+                    <label class="calc-checkbox">
+                        <input type="radio" name="vehicle_type" value="1.4">
+                        <span>Carrinha / Comercial (+40%)</span>
+                    </label>
+
+                    <h4 style="margin-top: 25px;">2. Serviços Desejados:</h4>
+                    <label class="calc-checkbox">
+                        <input type="checkbox" class="service-option" value="3500">
+                        <span>Troca de Óleo do Motor (3.500,00 MT)</span>
+                    </label>
+                    <label class="calc-checkbox">
+                        <input type="checkbox" class="service-option" value="2500">
+                        <span>Alinhamento & Calibragem (2.500,00 MT)</span>
+                    </label>
+                    <label class="calc-checkbox">
+                        <input type="checkbox" class="service-option" value="4000">
+                        <span>Substituição de Calços de Travão (4.000,00 MT)</span>
+                    </label>
+                    <label class="calc-checkbox">
+                        <input type="checkbox" class="service-option" value="3000">
+                        <span>Diagnóstico Computadorizado (3.000,00 MT)</span>
+                    </label>
+                    <label class="calc-checkbox">
+                        <input type="checkbox" class="service-option" value="4500">
+                        <span>Carregamento de AC & Higienização (4.500,00 MT)</span>
+                    </label>
+                    <label class="calc-checkbox">
+                        <input type="checkbox" class="service-option" value="6000">
+                        <span>Troca de Bateria 60Ah (6.000,00 MT)</span>
+                    </label>
+                </div>
+
+                <div class="calc-result-box">
+                    <h3>Estimativa do Serviço</h3>
+                    <div class="total-price"><span id="total-amount">0,00</span> MT</div>
+                    <p>Preço estimado incluindo mão de obra e materiais básicos.</p>
+                    <a href="#agendamento" class="btn-primary" style="margin-top: 20px; display: inline-flex;">Confirmar Agendamento</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="agendamento" class="content-section">
+            <div class="section-header">
+                <h2>Agendar <span>Atendimento</span></h2>
+                <p>Preencha os dados do condutor e da viatura para reservar a sua vaga.</p>
+            </div>
+            
+            <form id="booking-form" class="contact-form">
+                <div class="form-group">
+                    <label for="cliente"><i class="fa-solid fa-user"></i> Nome Completo:</label>
+                    <input type="text" id="cliente" required placeholder="Ex: João da Silva">
+                </div>
+                <div class="form-group">
+                    <label for="matricula"><i class="fa-solid fa-id-card"></i> Matrícula do Veículo:</label>
+                    <input type="text" id="matricula" required placeholder="Ex: ABC-123-MC">
+                </div>
+                <div class="form-group">
+                    <label for="data_agendamento"><i class="fa-solid fa-calendar"></i> Data Pretendida:</label>
+                    <input type="date" id="data_agendamento" required>
+                </div>
+                <button type="submit" class="btn-primary btn-block">Finalizar Agendamento <i class="fa-solid fa-check"></i></button>
+            </form>
+        </section>
+
+        <section id="painel" class="content-section">
+            <div class="section-header">
+                <h2>Painel da <span>Oficina</span></h2>
+                <p>Gestão da fila de espera e agendamentos efetuados em tempo real.</p>
+            </div>
+
+            <div class="table-container">
+                <table class="dashboard-table">
+                    <thead>
+                        <tr>
+                            <th>Cliente</th>
+                            <th>Matrícula</th>
+                            <th>Data</th>
+                            <th>Estado</th>
+                        </tr>
+                    </thead>
+                    <tbody id="agendamentos-lista">
+                        <tr>
+                            <td>Carlos Machava</td>
+                            <td>ADE-842-MP</td>
+                            <td>2026-09-18</td>
+                            <td><span class="status-badge status-pending">Pendente</span></td>
+                        </tr>
+                        <tr>
+                            <td>Marta Sousa</td>
+                            <td>AFG-102-MC</td>
+                            <td>2026-09-19</td>
+                            <td><span class="status-badge status-progress">Em Serviço</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 PlacaFácil - Gestão de Serviços Automotivos.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
